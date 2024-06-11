@@ -10,8 +10,10 @@
   },
   "dependencies": {
     "amfe-flexible": "^2.2.1",
+    "axios": "^1.7.2",
     "vant": "^4.9.1",
-    "vue": "^3.4.21"
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.3"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",
