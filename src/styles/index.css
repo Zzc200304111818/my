@@ -7,3 +7,14 @@
 .page-nav-bar .van-nav-bar__title {
 	color: white;
 }
+.gradient-button {
+    background: linear-gradient(to right, #ff6034, #ee0a24) !important;
+    border-color: transparent !important;
+    color: white;
+}
+
+.error-message {
+    color: red;
+    font-size: small;
+    text-indent: 3em;
+}
