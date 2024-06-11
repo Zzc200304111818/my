@@ -1,5 +1,5 @@
 import axios from "axios"
-axios.create({
+const request = axios.create({
 	baseURL: "http://localhost:3005/"
 })
 export default request
