@@ -1,6 +1,9 @@
 .page-nav-bar {
 	background-color: #3296fa;
 }
+.page-nav-bar-register {
+	background-color: #ff6034;
+}
 .page-nav-bar .van-nav-bar__title {
 	color: white;
 }
