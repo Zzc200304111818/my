@@ -13,6 +13,7 @@
 				</van-button>
 			</div>
 		</form>
+		<div class="footer"><a href="/register">没有账号？前往注册</a></div>
 	</div>
 </template>
 

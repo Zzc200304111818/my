@@ -63,7 +63,13 @@ const routes = [
 		path: '/mine/setting/accountManage',
 		name: 'accountManage',
 		component: () => import('../views/AccountManage.vue')
+	},
+	{
+		path: '/mine/setting/Login',
+		name: 'setting/Login',
+		component: () => import('../views/Login.vue')
 	}
+
 
 
 ]
