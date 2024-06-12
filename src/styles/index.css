@@ -29,3 +29,7 @@ img {
 .van-nav-bar__text,.van-nav-bar .van-icon {
     color: white;
 }
+
+.van-field__control {
+    text-align: right;
+}

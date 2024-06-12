@@ -20,6 +20,7 @@
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { showToast } from 'vant'
+
 const inputUsername = ref('')
 const inputPassword = ref('')
 const e = ref({
@@ -28,20 +29,30 @@ const e = ref({
 }) // 用于显示错误消息  
 const router = useRouter() // 注入router实例  
 
-const users = JSON.parse(localStorage.getItem('users'))
 const handleSubmit = () => {
-	e.value.username = e.value.password = '' // 重置错误消息  
+	e.value.username = '' // 重置用户名错误消息  
+	e.value.password = '' // 重置密码错误消息  
+
+	const users = JSON.parse(localStorage.getItem('users')) || [] // 确保users是一个数组  
+	let userFound = false // 标记是否找到了用户  
+
 	for (let i = 0; i < users.length; i++) {
 		if (inputUsername.value === users[i].username) {
+			userFound = true // 找到了用户  
 			if (inputPassword.value !== users[i].password) {
-				e.value.password = '密码不正确'
+				e.value.password = '密码不正确' // 仅在密码不匹配时设置密码错误消息  
+				break // 不需要继续检查其他用户  
 			} else {
 				showToast('登录成功')
+				sessionStorage.setItem('username', users[i].username)
 				router.push('/home')
+				break // 登录成功，跳出循环  
 			}
-		} else {
-			e.value.username = '用户名不存在'
 		}
+	}
+
+	if (!userFound) {
+		e.value.username = '用户名不存在' // 遍历完所有用户后，如果没有找到匹配的用户名，则显示错误消息  
 	}
 }  
 </script>

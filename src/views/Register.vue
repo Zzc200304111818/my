@@ -52,6 +52,7 @@ const handleSubmit = () => {
             username: username.value,
             password: password.value,
             stuNo: '',  //学号  
+            phoneNumber: '',
             sex: '',
             name: ''    //姓名  
         })
