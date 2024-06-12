@@ -47,8 +47,24 @@ const routes = [
 	{
 		path: '/mine',
 		name: 'mine',
-		component: () => import('../views/Mine.vue')
+		component: () => import('../views/Mine.vue'),
+	},
+	{
+		path: '/mine/mineMess',
+		name: 'mineMess',
+		component: () => import('../views/Minemess.vue')
+	},
+	{
+		path: '/mine/setting',
+		name: 'setting',
+		component: () => import('../views/setting.vue')
+	},
+	{
+		path: '/mine/setting/accountManage',
+		name: 'accountManage',
+		component: () => import('../views/accountManage.vue')
 	}
+
 
 ]
 const router = createRouter({
