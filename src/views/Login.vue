@@ -19,10 +19,7 @@
 <script setup>
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
-
-const username = localStorage.getItem('username')
-console.log(username)
-const password = localStorage.getItem('password')
+import { showToast } from 'vant'
 const inputUsername = ref('')
 const inputPassword = ref('')
 const e = ref({
@@ -31,19 +28,19 @@ const e = ref({
 }) // 用于显示错误消息  
 const router = useRouter() // 注入router实例  
 
+const users = JSON.parse(localStorage.getItem('users'))
 const handleSubmit = () => {
 	e.value.username = e.value.password = '' // 重置错误消息  
-
-	if (username === inputUsername.value && password === inputPassword.value) {
-
-
-		console.log('登录成功')
-		router.push('/home')
-	} else {
-		if (username !== inputUsername.value) {
-			e.value.username = '用户名不正确'
-		} else if (password !== inputPassword.value) {
-			e.value.password = '密码不正确'
+	for (let i = 0; i < users.length; i++) {
+		if (inputUsername.value === users[i].username) {
+			if (inputPassword.value !== users[i].password) {
+				e.value.password = '密码不正确'
+			} else {
+				showToast('登录成功')
+				router.push('/home')
+			}
+		} else {
+			e.value.username = '用户名不存在'
 		}
 	}
 }  
