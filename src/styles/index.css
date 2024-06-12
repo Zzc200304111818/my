@@ -26,3 +26,6 @@
 img {
     width: 100%;
 }
+.van-nav-bar__text,.van-nav-bar .van-icon {
+    color: white;
+}

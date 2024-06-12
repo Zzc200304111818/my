@@ -7,10 +7,10 @@
         <van-swipe-item><img src="../resource/image4.jpg"></van-swipe-item>
     </van-swipe>
     <van-grid>
-        <van-grid-item icon="shop-collect-o" text="宿舍管理" to="/management" />
+        <van-grid-item icon="apps-o" text="系统管理" to="/management" />
         <van-grid-item icon="friends-o" text="我的舍友" to="/menber" />
-        <van-grid-item icon="notes-o" text="任务列表" to="/workList" />
-        <van-grid-item icon="calendar-o" text="日历" to="/calendar" />
+        <van-grid-item icon="notes-o" text="任务栏" to="/workList" />
+        <van-grid-item icon="calendar-o" text="任务日志" to="/calendar" />
     </van-grid>
     <Footer></Footer>
 
