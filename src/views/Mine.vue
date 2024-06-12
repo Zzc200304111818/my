@@ -3,7 +3,7 @@
     <div id="Mine_div_1">
       <van-cell-group>
         <van-cell title="我" icon="user-o" is-link to="/mine/mineMess" size="large" />
-        <van-cell title="设置"  is-link to="/mine/setting" size="large"  />
+        <van-cell title="设置"  icon="setting-o" is-link to="/mine/setting" size="large"  />
         
 
       </van-cell-group>
