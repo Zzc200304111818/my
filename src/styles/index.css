@@ -1,12 +1,15 @@
 .page-nav-bar {
-	background-color: #3296fa;
+    background-color: #3296fa;
 }
+
 .page-nav-bar-register {
-	background-color: #ff6034;
+    background-color: #ff6034;
 }
+
 .page-nav-bar .van-nav-bar__title {
-	color: white;
+    color: white;
 }
+
 .gradient-button {
     background: linear-gradient(to right, #ff6034, #ee0a24) !important;
     border-color: transparent !important;
@@ -18,6 +21,7 @@
     font-size: small;
     text-indent: 3em;
 }
+
 .my-swipe .van-swipe-item {
     line-height: 200px;
     text-align: center;
@@ -26,10 +30,19 @@
 img {
     width: 100%;
 }
-.van-nav-bar__text,.van-nav-bar .van-icon {
+
+.van-nav-bar__text,
+.van-nav-bar .van-icon {
     color: white;
 }
 
-.van-field__control {
+.footer {
+    width: 100%;
     text-align: right;
+}
+
+.footer a {
+    text-decoration: none;
+    font-size: small;
+    margin-right: 40px;
 }

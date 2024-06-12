@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from "vue-router"
+import { createRouter, createWebHistory } from "vue-router"
 const routes = [
 	{
 		path: '/',
@@ -57,18 +57,18 @@ const routes = [
 	{
 		path: '/mine/setting',
 		name: 'setting',
-		component: () => import('../views/setting.vue')
+		component: () => import('../views/Setting.vue')
 	},
 	{
 		path: '/mine/setting/accountManage',
 		name: 'accountManage',
-		component: () => import('../views/accountManage.vue')
+		component: () => import('../views/AccountManage.vue')
 	}
 
 
 ]
 const router = createRouter({
-	history: createWebHashHistory(),
+	history: createWebHistory(),
 	routes,
 })
 

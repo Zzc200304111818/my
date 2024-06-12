@@ -1,7 +1,6 @@
 <template>
     <HeaderButton :title="title"></HeaderButton>
     <van-cell-group>
-        <van-cell :title="'用户名'" :value="user.username" />
         <van-field v-model="user.phoneNumber" placeholder="请输入联系方式" label="联系方式" />
         <van-field v-model="user.stuNo" type="number" placeholder="请输入学号" label="学号" />
         <van-field v-model="user.sex" placeholder="请输入性别" label="性别" clearable />

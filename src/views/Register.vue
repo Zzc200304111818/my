@@ -12,6 +12,7 @@
                 </van-button>
             </div>
         </form>
+        <div class="footer"><a href="/login">已有账号？前往登录</a></div>
     </div>
 </template>
 
