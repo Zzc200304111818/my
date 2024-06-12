@@ -18,3 +18,11 @@
     font-size: small;
     text-indent: 3em;
 }
+.my-swipe .van-swipe-item {
+    line-height: 200px;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+}
