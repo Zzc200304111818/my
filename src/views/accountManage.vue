@@ -5,5 +5,4 @@
 import HeaderButton from '@/components/HeaderButton.vue'
 import { ref } from 'vue'
 const title = ref('账号管理')
-const hello = null
 </script>
