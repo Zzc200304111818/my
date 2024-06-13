@@ -78,6 +78,16 @@ const routes = [
 		path: '/management/roomManage',
 		name: 'roomManage',
 		component: () => import('@/views/Room.vue')
+	},
+	{
+		path: '/workList/task',
+		name: 'task',
+		component: ()=> import('@/views/Task.vue')
+	},
+	{
+		path: '/management/feedBack',
+		name: 'feedBack',
+		component: ()=> import('@/views/FeedBack.vue')
 	}
 
 
