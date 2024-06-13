@@ -15,20 +15,19 @@ provide('active', active.value)
 const list = ref([])
 const loading = ref(false)
 const finished = ref(false)
-
+const message = ['你好吗？', '你在哪里？', '明天要答辩你睡得着吗?', '这个年纪你睡的早？', '明天必须得早起', '好烦啊！！！明天还要答辩', '我们项目还没做完，还是个半成品', '这可咋办啊？']
 const onLoad = () => {
-    // 异步更新数据
-    // setTimeout 仅做示例，真实场景中一般为 ajax 请求
+
     setTimeout(() => {
-        for (let i = 0; i < 10; i++) {
-            list.value.push(list.value.length + 1)
+        for (let i = 0; i < message.length; i++) {
+            list.value.push(message[i])
         }
 
         // 加载状态结束
         loading.value = false
 
         // 数据全部加载完成
-        if (list.value.length >= 40) {
+        if (list.value.length == message.length) {
             finished.value = true
         }
     }, 1000)

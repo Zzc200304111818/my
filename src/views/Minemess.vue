@@ -13,7 +13,7 @@
 <script setup>
 import HeaderButton from '@/components/HeaderButton.vue'
 import { ref, onMounted, reactive } from 'vue'
-
+import { showConfirmDialog, showToast } from 'vant'
 const title = ref('我的信息')
 const user = reactive({
     username: '',
@@ -59,14 +59,25 @@ const saveUser = () => {
                 if (Array.isArray(users)) {
                     for (let i = 0; i < users.length; i++) {
                         if (username === users[i].username) {
-                            // 更新用户信息  
-                            users[i].phoneNumber = user.phoneNumber
-                            users[i].stuNo = user.stuNo
-                            users[i].sex = user.sex
-                            users[i].name = user.name
+                            showConfirmDialog({
+                                title: '是否提交',
 
-                            // 存储更新后的users到localStorage  
-                            localStorage.setItem('users', JSON.stringify(users))
+                            })
+                                .then(() => {
+                                    // 更新用户信息  
+                                    users[i].phoneNumber = user.phoneNumber
+                                    users[i].stuNo = user.stuNo
+                                    users[i].sex = user.sex
+                                    users[i].name = user.name
+
+                                    // 存储更新后的users到localStorage  
+                                    localStorage.setItem('users', JSON.stringify(users))
+                                    showToast('保存成功')
+                                })
+                                .catch(() => {
+                                    showToast('保存失败')
+                                })
+
                             // 跳出循环，因为我们已经找到了并更新了用户  
                             break
                         }

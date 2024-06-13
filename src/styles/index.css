@@ -1,5 +1,5 @@
 .page-nav-bar {
-    background-color: #3296fa;
+    background: linear-gradient(to right, rgb(119, 68, 255), rgb(50, 150, 250), rgb(119, 68, 255));
 }
 
 .page-nav-bar-register {
@@ -46,10 +46,12 @@ img {
     font-size: small;
     margin-right: 40px;
 }
+
 .notice-swipe {
     height: 40px;
     line-height: 40px;
-  }
+}
+
 .flex {
     display: flex;
     width: 100%;
@@ -90,4 +92,8 @@ img {
     align-items: center;
     padding-left: 0.5rem;
     font-size: 0.5rem;
+    background: linear-gradient(to right, rgb(50, 150, 250), rgb(119, 68, 255));
+    color: #ffdd99;
+    border: 0px;
+    border-radius: 50px;
 }

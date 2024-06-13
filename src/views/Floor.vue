@@ -7,7 +7,7 @@
       <van-swipe-item>12点后楼层断电。</van-swipe-item>
     </van-swipe>
   </van-notice-bar>
-  <form @submit.prevent="handleSubmit">
+  <van-form @submit="handleSubmit">
     <van-field v-model="campus" is-link readonly name="picker" label="校区：" placeholder="点击选择校区"
       @click="showPickerHandler('campus')" />
     <van-field v-model="builds" is-link readonly name="picker" label="楼区：" placeholder="点击选择楼区"
@@ -16,24 +16,26 @@
       @click="showPickerHandler('build')" />
     <van-field v-model="layer" is-link readonly name="picker" label="楼层：" placeholder="点击选择楼层"
       @click="showPickerHandler('layer')" />
+    <van-field v-model="room" label="寝室号：" placeholder="请输入寝室号" :rules="[{ required: true, message: '请填写寝室号' }]" />
     <van-popup v-model:show="showPicker.show" position="bottom">
       <van-picker :columns="showPicker.columns" @confirm="onConfirm"
         @cancel="showPicker = { show: false, columns: [] }" />
     </van-popup>
 
     <van-button type="primary" block native-type="submit">提交</van-button>
-  </form>
+  </van-form>
 
 </template>
 <script setup>
 import { ref } from "vue"
-
+import { showConfirmDialog, showToast } from 'vant'
 import HeaderButton from "@/components/HeaderButton.vue"
 const title = ref("楼层管理")
 const campus = ref('')    //校区
 const builds = ref('')    //楼区
 const build = ref('')     //楼号
 const layer = ref('')     //楼层
+const room = ref('')
 const showPicker = ref({ show: false, columns: [] })
 const columnList = [
   [
@@ -114,12 +116,24 @@ const onConfirm = ({ selectedOptions }) => {
 }
 
 const handleSubmit = () => {
-  const layers = [{
-    campus: campus.value,
-    builds: builds.value,
-    build: build.value,
-    layer: layer.value
-  }]
-  localStorage.setItem('layers', JSON.stringify(layers))
+  showConfirmDialog({
+    title: '是否提交',
+
+  })
+    .then(() => {
+      const layers = {
+        campus: campus.value,
+        builds: builds.value,
+        build: build.value,
+        layer: layer.value,
+        room: room.value
+      }
+      localStorage.setItem('layers', JSON.stringify(layers))
+      showToast('提交成功')
+    })
+    .catch(() => {
+      showToast('提交失败')
+    })
+
 }  
 </script>

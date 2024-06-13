@@ -11,7 +11,12 @@
           <div class="personCompany">个人用户</div>
         </van-uploader>
       </div>
-      <div class="content-right">{{ username }}</div>
+      <div class="content-right">
+        <div>
+          ٩(●̮̃•)۶用户
+        </div>
+        <div>༺{{ username }}༻</div>
+      </div>
 
     </van-col>
   </van-row>
@@ -30,14 +35,12 @@
 import Footer from '../components/Footer.vue'
 import Header from '../components/Header.vue'
 import { ref, provide } from 'vue'
-import { onMounted } from 'vue'
 const active = ref('setting')
 const title = ref('个人中心')
 provide('active', active.value)
 const username = sessionStorage.getItem('username')
 
-const iconUrl = ref('https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg') // 用于存储图片的 DataURL  
-const baseImgUrl = '' // 如果需要的话，这里可以设置基础图片URL（但本例中不需要）  
+const iconUrl = ref('https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg') // 用于存储图片的 DataURL    
 
 // 处理文件读取后的逻辑  
 const handleAfterRead = (file) => {

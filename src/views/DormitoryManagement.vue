@@ -5,7 +5,7 @@
         <van-grid-item icon="shop-o" text="宿舍管理" url="/management/roomManage" />
         <van-grid-item icon="setting-o" text="报修" to="/DormitoryManagement/Repair" />
         <van-grid-item icon="cash-back-record-o" text="支出" to="/management/expend" />
-        <van-grid-item icon="refund-o" text="收入" to="/" />
+        <van-grid-item icon="refund-o" text="收入" to="/home" />
         <van-grid-item icon="records-o" text="用户反馈" to="/management/feedBack" />
     </van-grid>
 
@@ -16,4 +16,4 @@ import { ref } from "vue"
 
 const title = ref('系统管理')
 
-</script>
+</script>home

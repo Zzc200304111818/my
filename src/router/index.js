@@ -65,11 +65,6 @@ const routes = [
 		component: () => import('../views/AccountManage.vue')
 	},
 	{
-		path: '/mine/setting/Login',
-		name: 'setting/Login',
-		component: () => import('../views/Login.vue')
-	},
-	{
 		path: '/management/floorManage',
 		name: 'floorManage',
 		component: () => import('../views/Floor.vue')
@@ -82,27 +77,27 @@ const routes = [
 	{
 		path: '/workList/task',
 		name: 'task',
-		component: ()=> import('@/views/Task.vue')
+		component: () => import('@/views/Task.vue')
 	},
 	{
 		path: '/management/feedBack',
 		name: 'feedBack',
-		component: ()=> import('@/views/FeedBack.vue')
+		component: () => import('@/views/FeedBack.vue')
 	},
 	{
 		path: '/management/expend',
 		name: 'expend',
-		component: ()=> import('@/views/Expend.vue')
+		component: () => import('@/views/Expend.vue')
 	},
 	{
 		path: '/expend/expendList',
 		name: 'expendList',
-		component: ()=> import('@/views/ExpengList.vue')
+		component: () => import('@/views/ExpengList.vue')
 	},
 	{
 		path: '/DormitoryManagement/Repair',
 		name: 'DormitoryManagement/Repair',
-		component: ()=> import('@/views/Repair.vue')
+		component: () => import('@/views/Repair.vue')
 	}
 
 

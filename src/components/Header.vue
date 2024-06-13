@@ -12,6 +12,6 @@ const props = defineProps({
     title: String
 })
 function location() {
-    showToast('location')
+    showToast('南昌市')
 }
 </script>
