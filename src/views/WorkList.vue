@@ -1,5 +1,7 @@
 <template>
     <HeaderButton :title="title"></HeaderButton>
+
+
 </template>
 <script setup>
 import HeaderButton from '@/components/HeaderButton.vue'
