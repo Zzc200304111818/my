@@ -46,7 +46,10 @@ img {
     font-size: small;
     margin-right: 40px;
 }
-
+.notice-swipe {
+    height: 40px;
+    line-height: 40px;
+  }
 .flex {
     display: flex;
     width: 100%;

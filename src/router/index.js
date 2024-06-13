@@ -68,6 +68,16 @@ const routes = [
 		path: '/mine/setting/Login',
 		name: 'setting/Login',
 		component: () => import('../views/Login.vue')
+	},
+	{
+		path: '/management/floorManage',
+		name: 'floorManage',
+		component: () => import('../views/Floor.vue')
+	},
+	{
+		path: '/management/roomManage',
+		name: 'roomManage',
+		component: () => import('@/views/Room.vue')
 	}
 
 
