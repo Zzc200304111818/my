@@ -37,30 +37,30 @@ const layer = ref('')     //楼层
 const showPicker = ref({ show: false, columns: [] })
 const columnList = [
   [
-    { text: "蛟桥园" },
-    { text: "枫林园" },
-    { text: "麦庐园" },
+    { text: "蛟桥园", value: '1' },
+    { text: "枫林园", value: '2' },
+    { text: "麦庐园", value: '3' },
   ],
   [
-    { text: "宁庐" },
-    { text: "祥庐" },
-    { text: "和庐" },
-    { text: "静庐" }
+    { text: "宁庐", value: '1' },
+    { text: "祥庐", value: '2' },
+    { text: "和庐", value: '3' },
+    { text: "静庐", value: '4' }
   ],
   [
-    { text: "A" },
-    { text: "B" },
-    { text: "C" },
-    { text: "D" },
-    { text: "E" }
+    { text: "A", value: '1' },
+    { text: "B", value: '2' },
+    { text: "C", value: '3' },
+    { text: "D", value: '4' },
+    { text: "E", value: '5' }
   ],
   [
-    { text: "1" },
-    { text: "2" },
-    { text: "3" },
-    { text: "4" },
-    { text: "5" },
-    { text: "6" }
+    { text: "1", value: '1' },
+    { text: "2", value: '2' },
+    { text: "3", value: '3' },
+    { text: "4", value: '4' },
+    { text: "5", value: '5' },
+    { text: "6", value: '6' }
   ]
 ]
 const showPickerHandler = (type) => {
