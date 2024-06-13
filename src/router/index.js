@@ -98,6 +98,11 @@ const routes = [
 		path: '/expend/expendList',
 		name: 'expendList',
 		component: ()=> import('@/views/ExpengList.vue')
+	},
+	{
+		path: '/DormitoryManagement/Repair',
+		name: 'DormitoryManagement/Repair',
+		component: ()=> import('@/views/Repair.vue')
 	}
 
 
