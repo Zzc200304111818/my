@@ -88,6 +88,16 @@ const routes = [
 		path: '/management/feedBack',
 		name: 'feedBack',
 		component: ()=> import('@/views/FeedBack.vue')
+	},
+	{
+		path: '/management/expend',
+		name: 'expend',
+		component: ()=> import('@/views/Expend.vue')
+	},
+	{
+		path: '/expend/expendList',
+		name: 'expendList',
+		component: ()=> import('@/views/ExpengList.vue')
 	}
 
 
