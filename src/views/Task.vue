@@ -51,7 +51,7 @@
 <script setup>
 import HeaderButton from "@/components/HeaderButton.vue";
 import { ref } from "vue";
-
+import { showConfirmDialog } from 'vant';
 const title = ref("任务发布");
 
 const workname = ref("");
@@ -59,8 +59,19 @@ const work = ref("");
 const player = ref("");
 
 const onSubmit = (values) => {
-  console.log("submit", values);
+  showConfirmDialog({
+  title: '是否发布',
+
+})
+  .then(() => {
+    console.log("submit", values);
+    // on confirm
+  })
+  .catch(() => {
+    // on cancel
+  });
 };
+
 
 const result = ref('');
     const showPicker = ref(false);
